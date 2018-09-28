@@ -1,0 +1,146 @@
+.contact {
+    grid-column: full-start / full-end;
+    
+
+    z-index: 56;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    
+    background-color: $color-text;
+
+    color: #fff;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    padding-bottom: 6rem;
+
+    
+
+    
+    &__box{
+        margin-top: 7rem;
+        transform: translateX(-5.5rem);
+        display: flex;
+        flex-wrap: wrap;
+        
+        @media only screen and (max-width: $bp-medium) {
+            transform: scale(.7);
+        }
+
+        & > *:not(:last-child){
+            margin-right: 3rem;
+        }
+        
+
+
+    }
+
+    &__info{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-weight: 300;
+        padding: 0 3rem;
+        
+        
+        &-topbox{
+            &--subtitle{
+                font-weight: 700;
+                font-size: 1.3rem;
+                
+            }
+        }
+        &-bottombox{
+
+            &--mail{
+                color: $color-one;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+        
+
+    }
+
+    &__social{
+        
+    }
+
+    &__logo{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-whitelogo{
+            
+            margin-bottom: 5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                transform: scale(.8);
+                margin-bottom: 2rem;
+            }
+        }
+        &-socialbox{
+            display:flex;
+            flex-direction: column;
+            
+            
+
+            &--text{
+                
+                margin-bottom: .5rem;
+            }
+            
+            &--icons{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: .5rem;
+                
+
+                &--box{
+                    height: 4rem;
+                    width: 4rem;
+                    border: 1px solid #fff;
+                    border-radius: 100px;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    &:hover{
+                        border: 1px solid $color-one;
+                    }
+                    &:hover  .contact__logo-socialbox--icons--icon  {
+                        fill: $color-one;
+
+                    }
+
+                    
+                    
+                }
+
+                &--icon{
+                    height: 2rem;
+                    width: 2rem;
+                    fill: #fff;
+                    
+                    
+                }
+            }
+
+        }
+    }
+
+    &__sales{
+        transform: translateX(-3rem);
+        margin-top: 7rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            transform: scale(.7) translateX(-3rem);
+        }
+        &-img {
+            margin: 2rem 0;
+        }
+    }
+}

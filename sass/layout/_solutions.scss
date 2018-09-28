@@ -1,0 +1,115 @@
+.solutions {
+    grid-column: full-start / full-end;
+    
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    
+
+    &__mainbox{
+        width: 33%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin: 13rem 0;
+        z-index: 100;
+        @media only screen and (max-width: $bp-largest) {
+            width: 43%;
+        }
+        
+        & h3:after {
+            margin: 2rem auto;
+            content: "";
+            background-color: $color-one;
+            display: block;
+            height: 1px;
+            width: 0;
+            transition: all .2s;
+        }
+
+        &:hover h3:after{
+            width: 40%;
+            transition: all .2s;
+        }
+
+        &-text{
+            
+            margin: 0 auto 3.5rem auto;
+            font-size: 1.7rem;
+        }
+
+        &-btnBox{
+            
+        }
+    }
+    &__bgBox{
+        z-index: 99;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        
+        @media only screen and (max-width: $bp-xlarge) {
+            transform: scale(.7);
+        }
+        
+
+        &:hover &-color{
+            clip-path: polygon(0 0, 100% 25%, 100% 91%, 0 100%);
+            transition: all .5s;
+        }
+        &:hover &-imgbox {
+            clip-path: polygon(0 7%, 100% 10%, 83% 95%, 7% 90%);
+            transition: all .5s;
+        }
+
+        &-imgbox{
+            position: absolute;
+            top:0;
+            left:15rem;
+            width: 50rem;
+            height: 45rem;
+            clip-path: polygon(0 7%, 100% 0, 83% 100%, 7% 90%);
+            background-color: transparent;
+            z-index: 23;
+            transition: all .5s;
+            box-shadow: $shadow-pic;
+            
+
+            &--img {
+                width:70rem;
+                height: auto;
+            }
+        }
+
+        &-grey{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 65rem;
+            width: 35rem;
+            background-image: linear-gradient($color-bg-one, $color-bg-one);
+            z-index: 21;
+            clip-path: polygon(99% 61%, 34% 85%, 0% 89%, 0% 0%);
+            background-color: transparent;
+            
+            
+        }
+        &-color{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 45rem;
+            width: 45rem;
+            background-image: linear-gradient($color-two, $color-one);
+            z-index: 22;
+            clip-path: polygon(0 0, 100% 31%, 100% 90%, 0 100%);
+            background-color: transparent;
+            transition: all .5s;
+        }
+    }
+   
+
+}

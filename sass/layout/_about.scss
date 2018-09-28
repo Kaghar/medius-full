@@ -1,0 +1,127 @@
+.about {
+    grid-column: full-start / full-end;
+    display:flex;
+    justify-content: center;
+    position: relative;
+
+    &__bg{
+        position: absolute;
+        top: 7rem;
+        right:0;
+        @media only screen and (max-width: $bp-small) {
+            
+            right:7rem;
+        }
+        
+        &-grey{
+            position: absolute;
+            top: -10rem;
+            left: 32rem;
+            width: 48rem;
+            height: 60rem;
+            clip-path: polygon(-51% 10%, 100% 26%, 100% 100%, 36% 100%);
+            background-image: linear-gradient($color-bg-one, $color-bg-one);
+            background-color: transparent;
+
+            @media only screen and (max-width: $bp-small) {
+                top: -1rem;
+                left: -7rem;
+                width: 38rem;
+                height: 40rem;
+            }
+            
+        }
+
+        &-color{
+            
+            height: 80rem;
+            width: 80rem;
+            clip-path: polygon(72% 7%, 100% 50%, 100% 84%, 26% 100%, 1% 18%);
+            background-image: linear-gradient(221deg, $color-four    20%, $color-three 80%, $color-three);
+            background-color: transparent;
+            @media only screen and (max-width: $bp-small) {
+                
+                width: 38rem;
+                height: 40rem;
+            }
+
+        }
+
+    }
+    
+}
+
+.contentBox{
+    z-index: 15;
+    @media only screen and (max-width: $bp-medium) {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text{
+        margin-bottom: 3rem;
+        & h3:after {
+            margin: 2rem 0;
+            content: "";
+            background-color: $color-one;
+            display: block;
+            height: 2px;
+            width: 0;
+            transition: all .2s;
+
+        }
+
+        &:hover h3:after{
+            width: 10%;
+            transition: all .2s;
+        }
+        
+
+        &-title{
+            margin-bottom: 2rem;
+        }
+
+        &-smalltext{
+            width: 45rem;
+            font-size: 2rem;
+
+        }
+
+    }
+
+    &__img{
+        height: 57.5rem;
+        width: 86rem;
+        position: relative;
+        box-shadow: $shadow-pic;
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 40rem;
+            width: 60rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+            height: 20rem;
+            width: 30rem;
+        }
+
+        &-pic{
+            z-index: 10;
+            height: 100%;
+            width: auto;
+            overflow: hidden;
+
+        }
+
+        &-btn{
+            position: absolute;
+            bottom: 3.5rem;
+            right: 3.5rem;
+            z-index: 20;
+            height: 4.5rem;
+            width: 16rem;
+        }
+
+    }
+}
